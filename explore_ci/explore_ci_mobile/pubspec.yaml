@@ -1,0 +1,38 @@
+name: explore_ci_mobile
+description: "ExploreCI — application mobile de découverte touristique de la Côte d'Ivoire (VVP)."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Réseau
+  http: ^1.2.1
+
+  # Carte interactive (OpenStreetMap, pas de clé API à gérer -> gain de temps VVP)
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
+  # Géolocalisation (position de l'utilisateur sur la carte)
+  geolocator: ^12.0.0
+
+  # Stockage sécurisé des tokens JWT
+  flutter_secure_storage: ^9.2.2
+
+  # Gestion d'état simple (suffisant pour la VVP, pas de Bloc/Riverpod)
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
